@@ -368,8 +368,9 @@ const toggleModalCart = () => {
     }
 
     getData('./db/partners.json').then((restaurants) => {
+        formAnswers.textContent = 'LOAD...';
+        
         cardsWrapper.innerHTML = ''
-
         restaurants.forEach(createRestaurant)
     })
 
